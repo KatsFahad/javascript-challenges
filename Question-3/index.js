@@ -9,14 +9,13 @@ let nums = [2, 7, 11, 15];
 let target = 9;
 
 function twoSum(nums, target){
-    let ind = [];
-    for (let i = 0; i < nums.length; i++){
-        if (nums[i] + nums[i] === target){
-            return ind.push(nums)
+    let sum = 0;
+    for (let i = 0; i<nums.length; i++){
+        sum += nums[i];
+        if (sum === target){
+            return nums[i];
         }
     }
-    
 }
 
-let output = twoSum(nums, target);
-console.log(output);
+console.log(twoSum(nums, target));
